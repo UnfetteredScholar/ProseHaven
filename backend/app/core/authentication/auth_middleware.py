@@ -1,12 +1,12 @@
 import json
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from schemas.user import ActiveUser
+from schemas.user import User
 from core.authentication.auth_token import credentials_exception, verify_access_token
 from schemas.token import TokenData
 from typing import Dict, Any
 from core.authentication.hashing import hash_verify
-from core.config import settings, mongodb_client
+from core.storage import storage
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/login")
 
@@ -15,9 +15,7 @@ def get_user(email:str) -> Dict[str, Any]:
     """
     Gets a user from the db storage using their email
     """
-    db_name = settings.db_name
-    db_storage = mongodb_client[db_name]
-    users = db_storage["users"]
+    users = storage.db["users"]
     
     user = users.find_one({"email": email})
     if user is None:
@@ -26,7 +24,7 @@ def get_user(email:str) -> Dict[str, Any]:
     
     return user_data
 
-def authenticate_user(email: str, password: str) -> ActiveUser:
+def authenticate_user(email: str, password: str) -> User:
     user = get_user(email)
     if not user:
         # return False
@@ -39,7 +37,7 @@ def authenticate_user(email: str, password: str) -> ActiveUser:
         del user["password"]
     return user
 
-def get_current_user(token:str = Depends(oauth2_scheme)) -> ActiveUser:
+def get_current_user(token:str = Depends(oauth2_scheme)) -> User:
     """
     Gets the current user.
     

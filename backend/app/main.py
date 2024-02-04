@@ -1,4 +1,4 @@
-from api.v1.routers import health, login, register, user, forgot
+from api.v1.routers import health, login, register, user, forgot, story, chapter
 from core.config import settings
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,6 +22,8 @@ app.include_router(router=login.router, prefix=settings.API_V1_STR, tags=['login
 app.include_router(router=register.router, prefix=settings.API_V1_STR, tags=['register'])
 app.include_router(router=forgot.router, prefix=settings.API_V1_STR, tags=['password reset'])
 app.include_router(router=user.router, prefix=settings.API_V1_STR, tags=['users'])
+app.include_router(router=story.router, prefix=settings.API_V1_STR, tags=['stories'])
+app.include_router(router=chapter.router, prefix=settings.API_V1_STR, tags=['story chapters'])
 
 
 @app.get("/", include_in_schema=False)

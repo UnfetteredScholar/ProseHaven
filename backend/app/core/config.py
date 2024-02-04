@@ -2,7 +2,6 @@ from typing import Any
 
 from pydantic_settings import BaseSettings
 from pymongo import MongoClient, ASCENDING
-from pymongo.collection import Collection
 
 
 class Settings(BaseSettings):

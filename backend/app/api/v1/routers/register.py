@@ -6,11 +6,13 @@ from core.authentication.email_verification import send_email_verification
 from core.authentication.hashing import get_hash
 from schemas.user import UserIn
 from schemas.token import EmailVerificationToken
-from core.config import settings, mongodb_client
+from core.storage import storage
 from jose import ExpiredSignatureError
 from datetime import timedelta
 from pydantic import BaseModel
 from typing import Dict
+from datetime import datetime
+
 
 router = APIRouter()
 
@@ -22,8 +24,7 @@ class EmailInput(BaseModel):
              response_model=Dict[str, str])
 def register(form_data: UserIn) -> JSONResponse:
     """Performs user registration"""
-    db_name = settings.db_name
-    users_table = mongodb_client[db_name]["users"]
+    users_table = storage.db["users"]
 
     if users_table.find_one({"email": form_data.email}):
         raise HTTPException(
@@ -36,11 +37,15 @@ def register(form_data: UserIn) -> JSONResponse:
             )
     
     try:
+        date = datetime.utcnow()
         user = {
             "email": form_data.email,
             "username": form_data.username,
             "password": get_hash(form_data.password),
-            "verified": False
+            "favourites": [],
+            "verified": False,
+            "date_created": date,
+            "date_modified": date
         }
             
         id = str(users_table.insert_one(user).inserted_id)
@@ -65,8 +70,7 @@ def register(form_data: UserIn) -> JSONResponse:
              response_model=Dict[str, str])
 def verify_email(verification_token: EmailVerificationToken) -> JSONResponse:
     """Performs user email verification"""
-    db_name = settings.db_name
-    users_table = mongodb_client[db_name]["users"]
+    users_table = storage.db["users"]
     
     try:
         token_data = verify_access_token(verification_token.verification_token)

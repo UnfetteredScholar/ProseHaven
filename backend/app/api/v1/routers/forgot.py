@@ -4,7 +4,7 @@ from core.authentication.auth_middleware import get_user
 from core.authentication.auth_token import create_access_token, verify_access_token
 from core.authentication.email_verification import send_reset_email
 from core.authentication.hashing import get_hash
-from core.config import settings, mongodb_client
+from core.storage import storage
 from jose import ExpiredSignatureError
 from datetime import timedelta
 from pydantic import BaseModel
@@ -50,8 +50,7 @@ def forgot_password(request: ResetPasswordRequest) -> JSONResponse:
              response_model=Dict[str, str])
 def reset_password(request: PasswordResetRequest) -> JSONResponse:
     """Resets a user's password"""
-    db_name = settings.db_name
-    users_table = mongodb_client[db_name]["users"]
+    users_table = storage.db["users"]
     
     try:
         token_data = verify_access_token(request.token)

@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
-from core.authentication.auth_token import credentials_exception
 from schemas.token import Token
 from core.authentication.auth_middleware import authenticate_user
 from core.authentication.auth_token import create_access_token
