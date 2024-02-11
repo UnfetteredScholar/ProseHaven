@@ -3,7 +3,6 @@ from typing import List, Optional
 from datetime import datetime
 
 
-
 class Chapter(BaseModel):
     id: str
     story_id: str
@@ -11,12 +10,12 @@ class Chapter(BaseModel):
     content: str
     date_created: datetime
     date_modified: datetime
-    
-    
+
+
 class ChapterIn(BaseModel):
     title: str
     content: str
-    
+
 
 class ChapterUpdate(BaseModel):
     title: Optional[str] = None
