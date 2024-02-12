@@ -1,0 +1,8 @@
+header {
+	width: 100%;
+	overflow: hidden;
+}
+
+.header-container {
+	max-width: 1880px !important;
+}
