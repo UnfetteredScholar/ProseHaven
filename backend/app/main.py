@@ -7,6 +7,7 @@ from api.v1.routers import (
     story,
     chapter,
     comment,
+    populate_db
 )
 from core.config import settings
 from fastapi import FastAPI
@@ -41,6 +42,11 @@ app.include_router(
 )
 app.include_router(
     router=comment.router, prefix=settings.API_V1_STR, tags=["chapter comments"]
+)
+
+
+app.include_router(
+    router=populate_db.router, prefix=settings.API_V1_STR, tags=["populate db"]
 )
 
 
