@@ -32,7 +32,7 @@ export default function Header() {
 					modules={[Navigation, Pagination]}
 					pagination={{ el: '.swiper-pagination', clickable: true }}
 					navigation={{
-						preEl: '.button-prev-slide',
+						prevEl: '.button-prev-slide',
 						nextEl: '.button-next-slide',
 					}}
 				>
@@ -59,11 +59,11 @@ export default function Header() {
 
 					{/* Header Pagination */}
 					<div className="slider-button">
-						<div className="button-next-slide slidebutton">
-							<GoArrowRight />
-						</div>
 						<div className="button-prev-slide slidebutton">
 							<GoArrowLeft />
+						</div>
+						<div className="button-next-slide slidebutton">
+							<GoArrowRight />
 						</div>
 					</div>
 					{/* Header Pagination */}
@@ -72,7 +72,7 @@ export default function Header() {
 					</div>
 				</Swiper>
 
-				{/* J=Header Shape */}
+				{/* Header Shape */}
 				<div className="header-shape">
 					<img src={headerShape} alt="" />
 				</div>

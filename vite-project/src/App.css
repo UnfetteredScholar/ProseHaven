@@ -50,7 +50,7 @@ h5 {
 
 h1 {
 	font-size: 73px;
-	line-height: 145px;
+	/* line-height: 145px; */
 	color: var(--color-black-Ex);
 }
 

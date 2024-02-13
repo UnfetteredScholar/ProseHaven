@@ -7,8 +7,8 @@ export const navLinks = [
         path: '/'
     },
     {
-        name: 'About',
-        path: '/about'
+        name: 'Library',
+        path: '/library'
     },
     {
         name: 'Pages',
@@ -19,8 +19,8 @@ export const navLinks = [
         path: '/articles'
     },
     {
-        name: 'Contact',
-        path: '/contact'
+        name: 'Support',
+        path: '/support'
     },
 ];
 
