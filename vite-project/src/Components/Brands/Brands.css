@@ -1,0 +1,25 @@
+.Brands {
+	background: var(--color-bg-2);
+	padding: 20px 0;
+}
+
+.brands-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 100px;
+	align-items: center;
+}
+
+/* Max-width: 1024px */
+@media (max-width: 1024px) {
+	.brands-container {
+		gap: 25px;
+	}
+}
+
+/* Max-width: 600px */
+@media (max-width: 600px) {
+	.brands-container {
+		gap: 15px;
+	}
+}
