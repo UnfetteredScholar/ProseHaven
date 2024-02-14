@@ -36,7 +36,7 @@ export default function BestSellingBooks() {
 							{/* Right */}
 							<div className="selling-book-right">
 								<TitleTypeTwo
-									Title={'Best Selling Book'}
+									Title={'Book of the Week'}
 									ClassName="sellingBookTitle"
 								/>
 								<div>

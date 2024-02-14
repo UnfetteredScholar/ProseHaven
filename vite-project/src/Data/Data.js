@@ -299,14 +299,14 @@ export const quoteData = [
 
 
 
-// lettestArticleData Data .......................
-import ArticleImage1 from '../assets/letestArticlesIamge/ArticleImage1.png'
-import ArticleImage2 from '../assets/letestArticlesIamge/ArticleImage2.png'
-import ArticleImage3 from '../assets/letestArticlesIamge/ArticleImage3.png'
+// latestArticleData Data .......................
+import ArticleImage1 from '../assets/latestArticlesImage/ArticleImage1.png'
+import ArticleImage2 from '../assets/latestArticlesImage/ArticleImage2.png'
+import ArticleImage3 from '../assets/latestArticlesImage/ArticleImage3.png'
 
 
 
-export const lettestArticleData = [
+export const latestArticleData = [
     {
         id: 1,
         title: 'Reading books always makes the moments happy',
