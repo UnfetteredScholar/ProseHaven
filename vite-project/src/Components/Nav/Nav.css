@@ -6,7 +6,6 @@ nav {
 	top: 0;
 	background: var(--color-bg-1);
 	z-index: 100;
-	border: 1px solid var(--color-dark-Ex);
 }
 
 .navShadow {
@@ -26,7 +25,7 @@ nav {
 .nav-links {
 	display: flex;
 	align-items: center;
-	gap: 90px;
+	gap: 40px;
 }
 
 .nav-links a {
