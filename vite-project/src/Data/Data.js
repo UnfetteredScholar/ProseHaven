@@ -311,12 +311,12 @@ export const latestArticleData = [
         id: 1,
         title: 'Reading books always makes the moments happy',
         image: ArticleImage1,
-        titLink: "#",
+        titleLink: "#",
         date: '2 aug, 2021',
         inspiration: 'Inspiration',
         fbLink: "*",
         instLink: "*",
-        twitaLink: "*",
+        xLink: "*",
     },
     {
         id: 2,
@@ -327,7 +327,7 @@ export const latestArticleData = [
         inspiration: 'Inspiration',
         fbLink: "*",
         instLink: "*",
-        twitaLink: "*",
+        xLink: "*",
     },
     {
         id: 3,
@@ -338,7 +338,7 @@ export const latestArticleData = [
         inspiration: 'Inspiration',
         fbLink: "*",
         instLink: "*",
-        twitaLink: "*",
+        xLink: "*",
     },
 ];
 
