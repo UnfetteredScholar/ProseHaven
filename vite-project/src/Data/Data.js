@@ -39,13 +39,13 @@ export const navRight = {
         {
             id: 1,
             icon: FiUser,
-            link: '*'
+            link: '/login'
         },
-        {
-            id: 2,
-            icon: BsBag,
-            link: '*'
-        },
+        // {
+        //     id: 2,
+        //     icon: BsBag,
+        //     link: '*'
+        // },
         {
             id: 3,
             icon: VscSearch,

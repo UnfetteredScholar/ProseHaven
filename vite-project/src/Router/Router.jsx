@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //Import Pages
 import Home from '../Pages/Home';
 import NotFound from '../Pages/NotFound/NotFound';
+import Login from '../Pages/Authentication/Login/Login';
 
 // Import Components
 import Nav from '../Components/Nav/Nav';
@@ -15,6 +16,7 @@ export default function Router() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<NotFound />} />
+				<Route path="/login" element={<Login />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
