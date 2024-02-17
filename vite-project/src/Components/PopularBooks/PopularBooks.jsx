@@ -6,6 +6,8 @@ import TitleTypeOne from '../../UI/TitleTypeOne/TitleTypeOne';
 // Import Popular Books Data
 import { galleryData } from '../../Data/Data';
 
+import { Link } from 'react-router-dom';
+
 // Import useState
 import { useState } from 'react';
 
@@ -74,20 +76,22 @@ export default function PopularBooks() {
 
 				{/* Filter Books Content */}
 				<div className="gallery">
-					{filterItems.map(({ name, writer, price, image }, index) => {
+					{filterItems.map(({ name, writer, nameLink, image }, index) => {
 						return (
 							<div className="gallery-item" key={index}>
 								<div className="popularbook-image">
 									<img src={image} alt="" />
 								</div>
 								<div className="popularbook-info">
-									<h4>{name}</h4>
+									<Link to={nameLink}>
+										<h4>{name}</h4>
+									</Link>
 									<div>
 										<small>{writer}</small>
 									</div>
-									<h5>
+									{/* <h5>
 										<span>{price}</span>
-									</h5>
+									</h5> */}
 								</div>
 							</div>
 						);

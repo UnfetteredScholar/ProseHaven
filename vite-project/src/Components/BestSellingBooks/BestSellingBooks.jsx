@@ -25,7 +25,7 @@ export default function BestSellingBooks() {
 			{/* Selling book Content */}
 
 			{sellingBooksData.map(
-				({ img, infoTitle, infoTitleTop, desc, price, shopbtnLink }) => {
+				({ img, infoTitle, infoTitleTop, desc, shopbtnLink }) => {
 					return (
 						<div className="container bestselling-container">
 							{/* Left */}
@@ -43,11 +43,11 @@ export default function BestSellingBooks() {
 									<small>{infoTitleTop}</small>
 									<h3>{infoTitle}</h3>
 									<p>{desc}</p>
-									<h5>
+									{/* <h5>
 										<span>{price}</span>
-									</h5>
+									</h5> */}
 									<Link to={shopbtnLink} className="btn ">
-										<small>Shop It Now</small>
+										<small>Start Reading</small>
 										<BsArrowRight />
 									</Link>
 								</div>

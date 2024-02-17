@@ -3,7 +3,7 @@ import './Signup.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 import { MdAlternateEmail } from 'react-icons/md';
 
-export default function Login() {
+export default function Signup() {
 	return (
 		<section className="background">
 			<div className="container signup-container">

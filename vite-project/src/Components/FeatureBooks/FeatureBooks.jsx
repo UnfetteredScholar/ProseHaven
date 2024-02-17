@@ -66,7 +66,7 @@ export default function FeatureBooks() {
 					breakpoints={breakpoints}
 				>
 					{featuredBooksData.map(
-						({ img, imgLlink, name, nameLink, writer, price }, index) => {
+						({ img, imgLlink, name, nameLink, writer }, index) => {
 							return (
 								<SwiperSlide key={index}>
 									<div className="featurebook-box">
@@ -80,9 +80,6 @@ export default function FeatureBooks() {
 											<div>
 												<small>{writer}</small>
 											</div>
-											<h5>
-												<span>{price}</span>
-											</h5>
 										</div>
 									</div>
 								</SwiperSlide>

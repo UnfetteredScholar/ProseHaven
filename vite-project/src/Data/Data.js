@@ -4,23 +4,23 @@
 export const navLinks = [
     {
         name: 'Home',
-        path: '/'
+        path: '/home'
     },
     {
         name: 'Library',
         path: '/library'
     },
     {
-        name: 'Pages',
-        path: '/pages'
+        name: 'Write',
+        path: '/write'
     },
     {
         name: 'Articles',
         path: '/articles'
     },
     {
-        name: 'Support',
-        path: '/support'
+        name: 'About',
+        path: '/about'
     },
 ];
 
@@ -217,7 +217,7 @@ export const galleryData = [
         id: 1,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Business',
         image: popularbook1,
     },
@@ -225,7 +225,7 @@ export const galleryData = [
         id: 2,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Technology',
         image: popularbook2,
     },
@@ -233,7 +233,7 @@ export const galleryData = [
         id: 3,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Adventure',
         image: popularbook3,
     },
@@ -241,7 +241,7 @@ export const galleryData = [
         id: 4,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Romantic',
         image: popularbook4,
     },
@@ -249,7 +249,7 @@ export const galleryData = [
         id: 5,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Fictional',
         image: popularbook5,
     },
@@ -257,7 +257,7 @@ export const galleryData = [
         id: 6,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Business',
         image: popularbook6,
     },
@@ -265,7 +265,7 @@ export const galleryData = [
         id: 7,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Technology',
         image: popularbook7,
     },
@@ -273,7 +273,7 @@ export const galleryData = [
         id: 8,
         name: 'Great travel at desert',
         writer: 'Sanchit Howdy',
-        price: '$ 38.00 ',
+        nameLink: "*",
         category: 'Romantic',
         image: popularbook8,
     },
@@ -372,7 +372,7 @@ export const FootersLinksData = {
         { linkname: 'Advanced Search ', link: "*", },
     ],
     Myaccount: [
-        { linkname: 'Sign In', link: "*", },
+        { linkname: 'Sign In', link: "/login", },
         { linkname: 'articles ', link: "*", },
         { linkname: 'View Cart', link: "*", },
         { linkname: 'My Wishtlist  ', link: "*", },

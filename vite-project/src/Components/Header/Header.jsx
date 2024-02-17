@@ -45,7 +45,7 @@ export default function Header() {
 										<h1>{title}</h1>
 										<p dangerouslySetInnerHTML={{ __html: info }}></p>
 										<Link className="btn btn-border" to={'btnLink'}>
-											Learn More
+											Start Reading
 										</Link>
 									</div>
 									{/* Header Right */}
