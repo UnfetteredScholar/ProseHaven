@@ -1,6 +1,7 @@
 from fastapi import HTTPException, status
 from pymongo import MongoClient, ASCENDING
 from bson.objectid import ObjectId
+from os import getenv
 
 DB_NAME = "prose-haven-database"
 
@@ -13,7 +14,7 @@ class ProseHavenStorage:
 
     def __init__(self):
         """Initializes the storage class"""
-        self.client = MongoClient("mongodb://mongo_user:mongo_pwd@mongo:27017/")
+        self.client = MongoClient(getenv("MONGO_URI"))
         self.db = self.client[DB_NAME]
         self.db["users"].create_index([("email", ASCENDING)], unique=True)
         self.db["users"].create_index([("username", ASCENDING)], unique=True)
