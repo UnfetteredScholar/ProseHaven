@@ -44,3 +44,12 @@
 	align-items: center;
 	font-weight: 600;
 }
+
+@media (max-width: 800px) {
+	.work-section-wrapper {
+		margin-top: 5rem !important;
+	}
+	.work-section-bottom {
+		margin-top: 1rem !important;
+	}
+}
