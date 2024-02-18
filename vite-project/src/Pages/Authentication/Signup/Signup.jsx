@@ -54,7 +54,7 @@ export default function Signup() {
 
 					<div className="login-link">
 						<p>
-							Don't have an account? <a href="/login">Login</a>
+							Already have an account? <a href="/login">Login</a>
 						</p>
 					</div>
 				</form>

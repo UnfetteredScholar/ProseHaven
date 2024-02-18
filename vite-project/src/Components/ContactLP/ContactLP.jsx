@@ -47,7 +47,7 @@ export default function ContactLP() {
 		'https://github.com/UnfetteredScholar/ProseHaven.git';
 
 	return (
-		<div className="container contact">
+		<div className="container contact-container">
 			<h1>Our Team</h1>
 			<div className="team">
 				{team.map((member, index) => (

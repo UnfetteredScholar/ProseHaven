@@ -25,12 +25,12 @@ export default function AboutLP() {
 					a heartfelt endeavor to reignite the joy of reading in the digital
 					age.
 				</p>
-				<div className="about-buttons-container">
+				{/* <div className="about-buttons-container">
 					<button className="btn btn-border">Learn More</button>
 					<button className="watch-video-button">
 						<BsFillPlayCircleFill /> Watch Video
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

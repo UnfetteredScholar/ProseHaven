@@ -1,10 +1,10 @@
-.container {
+.contact-container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.contact {
+.contact-container {
 	text-align: center;
 }
 
@@ -43,10 +43,10 @@ h1 {
 
 .social-links a {
 	font-size: 1.2rem;
-	color: #000;
+	color: var(--color-dark);
 	text-decoration: none;
 }
 
 .social-links a:hover {
-	color: #444;
+	color: var(--color-black);
 }
