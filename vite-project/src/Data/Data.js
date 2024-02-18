@@ -4,7 +4,7 @@
 export const navLinks = [
     {
         name: 'Home',
-        path: '/home'
+        path: '/'
     },
     {
         name: 'Library',
