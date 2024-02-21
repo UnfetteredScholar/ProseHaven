@@ -1,0 +1,52 @@
+.contact-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.contact-container {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.team {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.team-member {
+	width: 250px;
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+.team-member h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.social-links a {
+	font-size: 1.2rem;
+	color: var(--color-dark);
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	color: var(--color-black);
+}
