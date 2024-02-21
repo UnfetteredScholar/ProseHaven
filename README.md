@@ -16,7 +16,7 @@ Prose Haven is an application that aims to provide a convenient and free platfor
 
 * Jessica Asamoah [Github](https://github.com/Jessica-Asamoah) | [Linkedin](https://www.linkedin.com/in/jessica-awuradjoa-asamoah-402ba6191/)
 
-* Jonathan Irondi [Github](https://github.com/irondijonathan) | [Linkedin]()
+* Jonathan Irondi [Github](https://github.com/irondijonathan) | [Linkedin](https://www.linkedin.com/in/irondi-jonathan/)
 
 
 ## Installation
