@@ -92,7 +92,7 @@ export default function Login() {
                             />
                             Remember me
                         </label>
-                        <a href="#">Forgot Password</a>
+                        <a href="/send_forgot_password">Forgot Password</a>
                     </div>
                     <button type="submit">Login</button>
 
