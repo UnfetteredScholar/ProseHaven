@@ -142,7 +142,7 @@ class ProseHavenStorage:
         chapters = chapters_table.find({"story_id": story_id})
 
         for chapter in chapters:
-            self.delete_chapter_record(story_id, str(chapter["_id"]), None)
+            self.delete_chapter_record(story_id, str(chapter["_id"]), user_id)
 
         stories_table.delete_one({"_id": ObjectId(story_id)})
 

@@ -18,7 +18,7 @@ from fastapi.responses import RedirectResponse
 """Defines the main api app for the ProseHaven backend"""
 
 app = FastAPI(title="ProseHaven API")
-origins = ["*"]  # change later
+origins = ["*"]  
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
