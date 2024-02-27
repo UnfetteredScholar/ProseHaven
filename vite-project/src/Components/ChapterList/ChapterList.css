@@ -26,3 +26,23 @@
 .chapter-content h5 {
 	margin-bottom: 0.5rem; /* Small space below heading */
 }
+
+.chapter-dropdown .dropdown-item {
+	/* Existing styles, if any */
+	background-color: #fff; /* Set background color */
+	color: #333; /* Set text color */
+	padding: 0.5rem 1rem; /* Set padding */
+	border-radius: 4px; /* Add rounded corners */
+	cursor: pointer; /* Set cursor to pointer on hover */
+	transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.chapter-dropdown .dropdown-item:hover {
+	background-color: #f5f5f5; /* Change background color on hover */
+}
+
+.chapter-dropdown .dropdown-item.active {
+	/* Existing styles, if any */
+	background-color: #ddd; /* Set background color for active item */
+	font-weight: bold; /* Bold the text for active item */
+}

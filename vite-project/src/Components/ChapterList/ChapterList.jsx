@@ -6,7 +6,7 @@ const ChapterList = ({ chapters }) => {
 	const [selectedChapter, setSelectedChapter] = useState(null);
 
 	const handleChapterSelect = (chapterIndex) => {
-		setSelectedChapter(chapterIndex);
+		setSelectedChapter(selectedChapter === chapterIndex ? null : chapterIndex);
 	};
 
 	return (
@@ -22,10 +22,12 @@ const ChapterList = ({ chapters }) => {
 								: 'Select Chapter'
 						}
 						className="chapter-dropdown"
+						onClick={() => handleChapterSelect(index)}
 					>
 						<Dropdown.Item
 							onClick={() => handleChapterSelect(index)}
 							active={selectedChapter === index}
+							className="chapter-link"
 						>
 							Chapter {index + 1}
 						</Dropdown.Item>
