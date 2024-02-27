@@ -1,0 +1,32 @@
+/* story-detail.css */
+
+.story-detail {
+	padding: 2rem 0; /* Add padding around the section */ /* Set background color */
+}
+
+.container {
+	max-width: 1024px; /* Set maximum width for the container */
+	margin: 0 auto; /* Center the content horizontally */
+}
+
+.story-detail-header {
+	display: flex; /* Arrange buttons horizontally */
+	align-items: center;
+	justify-content: center; /* Space buttons evenly */
+}
+
+.story {
+	margin-bottom: 2rem; /* Add space between each story item */
+	display: flex; /* Arrange title and thumbnail side-by-side */
+	align-items: center; /* Align title and thumbnail vertically */
+}
+
+.story h1 {
+	margin-right: 1rem; /* Add space between title and thumbnail */
+	font-size: 1.5rem; /* Set font size for title */
+}
+
+.story-detail-thumbnail img {
+	width: 200px; /* Set width for the image */
+	height: auto; /* Maintain aspect ratio */
+}

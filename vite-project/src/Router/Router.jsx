@@ -12,11 +12,12 @@ import LandingPage from '../Pages/LandingPage/LandingPage';
 import StoryDetail from '../Pages/Story/StoryDetail/StoryDetail';
 import StoryPage from '../Pages/Story/StoryPage/StoryPage';
 import Profile from '../Pages/Profile/Profile';
+import Library from '../Pages/Library/Library';
 
 // Import Components
 import Nav from '../Components/Nav/Nav';
 import Footer from '../Components/Footer/Footer';
-
+import { LibraryProvider } from '../Components/LibraryContext';
 export default function Router() {
 	return (
 		<BrowserRouter>
@@ -33,6 +34,15 @@ export default function Router() {
 				<Route path="/about" element={<LandingPage />} />
 				<Route path="/story/:id" element={<StoryDetail />} />
 				<Route path="/write" element={<StoryPage />} />
+
+				<Route
+					path="/library"
+					element={
+						<LibraryProvider>
+							<Library />
+						</LibraryProvider>
+					}
+				/>
 			</Routes>
 			<Footer />
 		</BrowserRouter>
