@@ -9,7 +9,7 @@ export default function StoryDetail() {
 	const [bookDetails, setBookDetails] = useState(null);
 	const [userDetails, setUserDetails] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const cover = '../../../../public/Covers/' + id + '.jpeg'
+	const cover = '../Covers/' + id + '.jpeg'
 	const [inLibrary, setInLibrary] = useState(false);
 
 	useEffect(() => {

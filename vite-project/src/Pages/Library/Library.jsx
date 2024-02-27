@@ -9,7 +9,7 @@ export default function Library() {
     const [books, setBooks] = useState([]);
     // let books = useRef([]);
     const [isLoading, setIsLoading] = useState(true);
-    const cover = '../../../../public/Covers/';
+    const cover = '../Covers/';
     // const [inLibrary, setInLibrary] = useState(false);
 
     useEffect(() => {
