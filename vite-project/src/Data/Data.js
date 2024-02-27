@@ -15,8 +15,8 @@ export const navLinks = [
         path: '/write'
     },
     {
-        name: 'Articles',
-        path: '/articles'
+        name: 'Explore',
+        path: '/explore'
     },
     {
         name: 'About',
@@ -192,8 +192,9 @@ export const sellingBooksData = [
         infoTitleTop: 'By Timbur Hood',
         infoTitle: 'Birds gonna be happy',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac',
+        details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto saepe, nulla, nam accusantium quo quas maiores corporis itaque voluptatum iste, molestias deserunt fuga reiciendis amet debitis? Nemo autem debitis reiciendis?Illum officia debitis quisquam facilis, incidunt accusantium delectus magni dicta vitae dolorem hic, voluptas inventore qui cupiditate dolor quaerat excepturi ipsa cumque iste, ad voluptatibus impedit. Blanditiis atque ut laborum. Placeat laboriosam provident voluptate totam itaque amet qui fuga aspernatur corporis earum impedit numquam laudantium quas cupiditate ab ut at est voluptatibus possimus eaque aliquam expedita quae, vero iste. Itaque? Blanditiis dignissimos illum eum accusamus beatae ipsum a nemo quos, voluptatem eaque? At voluptatibus a explicabo nam vero, recusandae rerum hic illum, tempore fugit est officiis eaque ad aliquam. Soluta! Officiis, pariatur sed dignissimos porro illo similique nam? Maiores illo harum nostrum voluptates magnam vero consequuntur sed est rem, libero repudiandae quo dolorem aliquam cumque pariatur numquam, a at minima. Necessitatibus aspernatur nemo, quos nobis sit distinctio iure cum quidem consequuntur aut, accusamus voluptatibus quasi repellat, quibusdam officia quod vero facere? Quis necessitatibus dolores accusamus quia eveniet mollitia minus neque? Nulla, a! Maxime iste hic quisquam soluta ad aliquid ullam, atque facere laborum temporibus ipsa saepe sit, maiores illum expedita voluptatum veniam officia pariatur. Voluptatum consequatur quaerat iusto distinctio id!',
         price: '$ 45.00',
-        shopbtnLink: "*",
+        shopbtnLink: "/story/1",
     }
 ];
 

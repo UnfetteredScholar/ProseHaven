@@ -6,6 +6,8 @@ import NotFound from '../Pages/NotFound/NotFound';
 import Login from '../Pages/Authentication/Login/Login';
 import Signup from '../Pages/Authentication/Signup/Signup';
 import LandingPage from '../Pages/LandingPage/LandingPage';
+import StoryDetail from '../Pages/Story/StoryDetail/StoryDetail';
+import StoryPage from '../Pages/Story/StoryPage/StoryPage';
 
 // Import Components
 import Nav from '../Components/Nav/Nav';
@@ -21,6 +23,8 @@ export default function Router() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/about" element={<LandingPage />} />
+				<Route path="/story/:id" element={<StoryDetail />} />
+				<Route path="/write" element={<StoryPage />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
