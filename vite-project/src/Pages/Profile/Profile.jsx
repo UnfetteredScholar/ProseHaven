@@ -46,6 +46,7 @@ export default function Profile() {
           setFollows(data['follows'].length);
           setJoined(data['date_created'].split(' ')[0]);
           setIsLoading(false);
+          localStorage.setItem('userFollows', data['follows']);
   
         } catch (error) {
           console.error('Error fetching data:', error);
