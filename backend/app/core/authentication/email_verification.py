@@ -29,11 +29,10 @@ load_dotenv()
 #         # server.starttls()
 #         # server.login(smtp_username, smtp_password)
 #         server.sendmail(sender_email, [receiver_email], msg.as_string())
-        
 
 
 def send_email_verification(receiver_email, token):
-    
+
     url = f"{getenv('VERIFY_EMAIL_URL')}?token={token}"
     sender_email = getenv("EMAIL_ACCOUNT")
     sender_password = getenv("EMAIL_PASSWORD")
@@ -44,12 +43,12 @@ def send_email_verification(receiver_email, token):
     )
     # Set up the MIME
     email_msg = MIMEMultipart()
-    email_msg['From'] = sender_email
-    email_msg['To'] = receiver_email
-    email_msg['Subject'] = subject
+    email_msg["From"] = sender_email
+    email_msg["To"] = receiver_email
+    email_msg["Subject"] = subject
 
     # Attach the message to the email
-    email_msg.attach(MIMEText(message, 'plain'))
+    email_msg.attach(MIMEText(message, "plain"))
 
     # Create SMTP session
     session = smtplib.SMTP(getenv("SMTP_HOST"), int(getenv("SMTP_PORT")))
@@ -63,7 +62,7 @@ def send_email_verification(receiver_email, token):
 
 
 def send_reset_email(receiver_email, token):
-    
+
     url = f"{getenv('RESET_PASSWORD_URL')}?token={token}"
     sender_email = getenv("EMAIL_ACCOUNT")
     sender_password = getenv("EMAIL_PASSWORD")
@@ -74,12 +73,12 @@ def send_reset_email(receiver_email, token):
     )
     # Set up the MIME
     email_msg = MIMEMultipart()
-    email_msg['From'] = sender_email
-    email_msg['To'] = receiver_email
-    email_msg['Subject'] = subject
+    email_msg["From"] = sender_email
+    email_msg["To"] = receiver_email
+    email_msg["Subject"] = subject
 
     # Attach the message to the email
-    email_msg.attach(MIMEText(message, 'plain'))
+    email_msg.attach(MIMEText(message, "plain"))
 
     # Create SMTP session
     session = smtplib.SMTP(getenv("SMTP_HOST"), int(getenv("SMTP_PORT")))
