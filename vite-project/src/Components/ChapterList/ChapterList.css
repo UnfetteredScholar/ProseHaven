@@ -1,0 +1,22 @@
+/* src/styles/ChapterList.css */
+.chapter-list {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.chapter-dropdown {
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+}
+
+.chapter-content {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.chapter-content h5 {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}

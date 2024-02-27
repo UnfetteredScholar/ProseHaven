@@ -9,6 +9,8 @@ import Verify from '../Pages/Authentication/Verify/Verify';
 import Forgot from '../Pages/Authentication/Forgot/Forgot';
 import SendForgot from '../Pages/Authentication/SendForgot/SendForgot';
 import LandingPage from '../Pages/LandingPage/LandingPage';
+import StoryDetail from '../Pages/Story/StoryDetail/StoryDetail';
+import StoryPage from '../Pages/Story/StoryPage/StoryPage';
 import Profile from '../Pages/Profile/Profile';
 
 // Import Components
@@ -29,6 +31,8 @@ export default function Router() {
 				<Route path="/send_forgot_password" element={<SendForgot />} />
 				<Route path="/profile" element={<Profile />} />
 				<Route path="/about" element={<LandingPage />} />
+				<Route path="/story/:id" element={<StoryDetail />} />
+				<Route path="/write" element={<StoryPage />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
