@@ -13,6 +13,7 @@ import StoryDetail from '../Pages/Story/StoryDetail/StoryDetail';
 import StoryPage from '../Pages/Story/StoryPage/StoryPage';
 import Profile from '../Pages/Profile/Profile';
 import Library from '../Pages/Library/Library';
+import Explore from '../Pages/Explore/Explore';
 
 // Import Components
 import Nav from '../Components/Nav/Nav';
@@ -35,6 +36,7 @@ export default function Router() {
 				<Route path="/story/:id" element={<StoryDetail />} />
 				<Route path="/write" element={<StoryPage />} />
 				<Route path="/library" element={<Library />} />
+				<Route path="/explore" element={<Explore />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
