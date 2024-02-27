@@ -16,7 +16,7 @@ export default function Forgot() {
             body['email'] = email;
 
 
-            const response = await fetch('http://localhost:8000/api/v1/forgot_password', {
+            const response = await fetch('http://web-01.akt-global.tech/api/v1/forgot_password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

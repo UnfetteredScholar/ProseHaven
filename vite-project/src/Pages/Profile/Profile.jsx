@@ -25,7 +25,7 @@ export default function Profile() {
         try {
           // Make your API call here
           const accessToken = localStorage.getItem('accessToken');
-          const response = await fetch('http://localhost:8000/api/v1/users/me', {
+          const response = await fetch('http://web-01.akt-global.tech/api/v1/users/me', {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + accessToken,

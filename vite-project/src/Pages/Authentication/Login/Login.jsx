@@ -18,7 +18,7 @@ export default function Login() {
             formData.append('username', username);
             formData.append('password', password);
 
-			const response = await fetch('http://localhost:8000/api/v1/login', {
+			const response = await fetch('http://web-01.akt-global.tech/api/v1/login', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded',

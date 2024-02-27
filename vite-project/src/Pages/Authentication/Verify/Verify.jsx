@@ -15,7 +15,7 @@ export default function Verify() {
             body['email'] = email;
 
 
-            const response = await fetch('http://localhost:8000/api/v1/register/verify/resend', {
+            const response = await fetch('http://web-01.akt-global.tech/api/v1/register/verify/resend', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export default function Verify() {
                 body['verification_token'] = token;
 
 
-                const response = await fetch('http://localhost:8000/api/v1/register/verify', {
+                const response = await fetch('http://web-01.akt-global.tech/api/v1/register/verify', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

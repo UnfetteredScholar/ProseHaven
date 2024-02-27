@@ -22,7 +22,7 @@ export default function Signup() {
             body['username'] = username;
             body['password'] = password;
 
-			const response = await fetch('http://localhost:8000/api/v1/register', {
+			const response = await fetch('http://web-01.akt-global.tech/api/v1/register', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',

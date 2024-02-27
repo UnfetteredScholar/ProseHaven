@@ -1,0 +1,21 @@
+.story-detail-thumbnail {
+    display: inline-block; 
+    max-width: 300px; 
+    max-height: 300px; 
+    /* overflow: hidden;  */
+  }
+  
+.story-detail-thumbnail img {
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.story-detail-block {
+	display: flex;
+	/* align-items: ; */
+	justify-content: center;
+	flex-direction: row;
+	gap: 100px;
+	text-align: center;
+}
