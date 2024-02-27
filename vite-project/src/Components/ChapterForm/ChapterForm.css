@@ -1,12 +1,19 @@
 .chapter-form {
-	display: flex;
-	flex-direction: column;
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0 auto;
 }
 
 .chapter-label {
 	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.chapter-input {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
 	margin-bottom: 1rem;
 }
 
@@ -16,4 +23,6 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	resize: vertical;
+	width: 100%;
+	margin-bottom: 1rem;
 }

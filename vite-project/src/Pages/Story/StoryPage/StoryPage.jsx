@@ -7,9 +7,12 @@ import ChapterList from '../../../Components/ChapterList/ChapterList';
 
 function StoryPage() {
 	const [chapters, setChapters] = useState([]);
+	const [title, setTitle] = useState('');
 
-	const addChapter = (content) => {
-		setChapters([...chapters, content]);
+	const addChapter = ({ title, content }) => {
+		const newChapter = { title, content }; // Create chapter object
+		setTitle(title); // Update title state
+		setChapters([...chapters, newChapter]);
 	};
 
 	return (
@@ -20,8 +23,8 @@ function StoryPage() {
 					<ChapterForm onSubmit={addChapter} />
 				</Col>
 				<Col xs={6}>
-					<h2>Your Story</h2>
-					<ChapterList chapters={chapters} className="chapter-list" />
+					<h2 className="story-title">{title}</h2>
+					<ChapterList chapters={chapters} /> {/* Pass chapters only */}
 				</Col>
 			</Row>
 		</Container>

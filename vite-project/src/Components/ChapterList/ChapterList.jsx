@@ -1,16 +1,18 @@
 import './ChapterList.css';
 import { useState } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
+import ChapterForm from '../ChapterForm/ChapterForm';
 
-const ChapterList = ({ chapters }) => {
+const ChapterList = ({ title, chapters }) => {
 	const [selectedChapter, setSelectedChapter] = useState(null);
 
 	const handleChapterSelect = (chapterIndex) => {
-		setSelectedChapter(chapterIndex);
+		setSelectedChapter(selectedChapter === chapterIndex ? null : chapterIndex);
 	};
 
 	return (
 		<div className="chapter-list mt-5">
+			<h2 className="book-title">{title}</h2>
 			<DropdownButton
 				id="chapter-dropdown"
 				title={
@@ -33,7 +35,7 @@ const ChapterList = ({ chapters }) => {
 			{selectedChapter !== null && (
 				<div className="chapter-content">
 					<h5>Chapter {selectedChapter + 1}</h5>
-					<p>{chapters[selectedChapter]}</p>
+					<p>{chapters[selectedChapter].content}</p>
 				</div>
 			)}
 		</div>
