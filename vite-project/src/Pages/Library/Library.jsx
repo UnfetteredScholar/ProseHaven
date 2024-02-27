@@ -15,7 +15,9 @@ export default function Library() {
     useEffect(() => {
         const getBooks = async () => {
             try {
-                setBooks([])
+                if (books.length > 0) {
+                    return
+                }
                 userFollows.forEach(async (id) => {
                     const response = await fetch('http://web-01.akt-global.tech/api/v1/stories/' + id, {
                         method: 'GET',
@@ -55,7 +57,7 @@ export default function Library() {
         <section className="story-detail">
             <div className="story">
                 <h1>Library</h1>
-                <h2>{books.length}</h2>
+                {/* <h2>{books.length}</h2> */}
                 <div>
     </div>
                 {books.map((book, index) => (
