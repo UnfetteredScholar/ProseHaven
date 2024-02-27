@@ -21,7 +21,7 @@ function StoryPage() {
 				</Col>
 				<Col xs={6}>
 					<h2>Your Story</h2>
-					<ChapterList chapters={chapters} className="chapter-list" />
+					<ChapterList chapters={chapters} />
 				</Col>
 			</Row>
 		</Container>

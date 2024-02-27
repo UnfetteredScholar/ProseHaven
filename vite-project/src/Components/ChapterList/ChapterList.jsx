@@ -11,31 +11,33 @@ const ChapterList = ({ chapters }) => {
 
 	return (
 		<div className="chapter-list mt-5">
-			<DropdownButton
-				id="chapter-dropdown"
-				title={
-					selectedChapter !== null
-						? `Chapter ${selectedChapter + 1}`
-						: 'Select Chapter'
-				}
-				className="chapter-dropdown"
-			>
-				{chapters.map((chapter, index) => (
-					<Dropdown.Item
-						key={index}
-						onClick={() => handleChapterSelect(index)}
-						active={selectedChapter === index}
+			{chapters.map((chapter, index) => (
+				<div key={index}>
+					<h3 className="book-title">{chapter.title}</h3>
+					<DropdownButton
+						id={`chapter-dropdown-${index}`}
+						title={
+							selectedChapter !== null && selectedChapter === index
+								? `Chapter ${index + 1}`
+								: 'Select Chapter'
+						}
+						className="chapter-dropdown"
 					>
-						Chapter {index + 1}
-					</Dropdown.Item>
-				))}
-			</DropdownButton>
-			{selectedChapter !== null && (
-				<div className="chapter-content">
-					<h5>Chapter {selectedChapter + 1}</h5>
-					<p>{chapters[selectedChapter]}</p>
+						<Dropdown.Item
+							onClick={() => handleChapterSelect(index)}
+							active={selectedChapter === index}
+						>
+							Chapter {index + 1}
+						</Dropdown.Item>
+					</DropdownButton>
+					{selectedChapter !== null && selectedChapter === index && (
+						<div className="chapter-content">
+							<h5>Chapter {index + 1}</h5>
+							<p>{chapter.content}</p>
+						</div>
+					)}
 				</div>
-			)}
+			))}
 		</div>
 	);
 };

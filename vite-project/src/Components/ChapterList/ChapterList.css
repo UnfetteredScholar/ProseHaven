@@ -1,22 +1,28 @@
 /* src/styles/ChapterList.css */
 .chapter-list {
-	max-width: 600px;
-	margin: 0 auto;
+	margin-top: 1rem; /* Adjust margin as needed */
+	display: flex; /* Arranges chapters horizontally */
+	flex-wrap: wrap; /* Allows chapters to wrap onto multiple lines */
+	gap: 1rem; /* Spacing between chapters */
 }
 
-.chapter-dropdown {
-	margin-bottom: 1rem;
-	margin-right: 1rem;
+.chapter-item {
+	border: 1px solid #ddd; /* Add a subtle border */
+	border-radius: 4px; /* Rounded corners */
+	padding: 1rem; /* Inner padding for content */
+	width: calc(50% - 1rem); /* Sets width based on available space */
+}
+
+.book-title {
+	font-weight: bold; /* Bold title */
+	margin-bottom: 0.5rem; /* Small space below title */
 }
 
 .chapter-content {
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 1rem;
-	margin-top: 1rem;
+	background-color: #f5f5f5; /* Light background for content */
+	padding: 1rem; /* Padding for content within */
 }
 
 .chapter-content h5 {
-	font-size: 1.2rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem; /* Small space below heading */
 }
