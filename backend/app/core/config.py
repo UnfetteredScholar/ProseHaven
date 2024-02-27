@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     releaseId: str = "1.1"
     API_V1_STR: str = "/api/v1"
     # mongodb_client: MongoClient | None
-    db_name:str = "prose-haven-database"
+    db_name: str = "prose-haven-database"
 
     def __init__(self, **values: Any):
         super().__init__(**values)
@@ -17,8 +17,7 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-mongodb_client = MongoClient("mongodb://mongo_user:mongo_pwd@mongo:27017/")
-mongodb_client[settings.db_name]["users"].create_index([("email", ASCENDING)], unique=True)
-mongodb_client[settings.db_name]["users"].create_index([("username", ASCENDING)], unique=True)
+# mongodb_client = MongoClient("mongodb://mongo_user:mongo_pwd@mongo:27017/")
+# mongodb_client[settings.db_name]["users"].create_index([("email", ASCENDING)], unique=True)
+# mongodb_client[settings.db_name]["users"].create_index([("username", ASCENDING)], unique=True)
 # mongodb_client = MongoClient("mongodb://mongo_user:mongo_pwd@localhost:27017/")
-

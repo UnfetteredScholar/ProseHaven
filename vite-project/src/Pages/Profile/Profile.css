@@ -1,0 +1,36 @@
+.Profile {
+	height: calc(100vh - 250px);
+	padding: 0 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-bg-2);
+	border-bottom: 1px solid var(--color-dark-Ex);
+}
+
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+	text-align: center;
+}
+
+.container.profile-container.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 100px;
+	text-align: center;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+}
+
+.profile-container .btn {
+	z-index: 1;
+}

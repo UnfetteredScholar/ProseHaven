@@ -17,14 +17,17 @@ credentials_exception = HTTPException(
     headers={"WWW-Authenticate": "Bearer"},
 )
 
-def create_access_token(data: Dict[str, Any], expires_delta: Union[timedelta, None] = None) -> str:
+
+def create_access_token(
+    data: Dict[str, Any], expires_delta: Union[timedelta, None] = None
+) -> str:
     """
     Creates a jwt access token using the data provided
-    
+
     Args:
         data: data to be encoded into the token
         expires_delta: period of time which the token will be valid
-    
+
     Returns:
         encoded jwt string
     """
@@ -39,13 +42,14 @@ def create_access_token(data: Dict[str, Any], expires_delta: Union[timedelta, No
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
+
 def verify_access_token(token: str) -> TokenData:
     """
     Verifies an access token
-    
+
     Args:
         token: the jwt token string
-        
+
     Returns:
         TokenData object containing the data in the token
     """
@@ -55,11 +59,10 @@ def verify_access_token(token: str) -> TokenData:
         id: str = payload.get("id")
         token_type: str = payload.get("type")
         # role: str = payload.get("role")
-        
+
         if email is None or id is None:
             raise credentials_exception
-        
+
         return TokenData(email=email, id=id, type=token_type)
     except JWTError:
         raise credentials_exception
-    

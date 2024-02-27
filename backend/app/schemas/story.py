@@ -9,7 +9,8 @@ class StoryStatus(str, Enum):
     COMPLETE = "Complete"
     HIATUS = "Hiatus"
     DROPPED = "Dropped"
-    
+
+
 class StoryGenre(str, Enum):
     FANTASY = "Fantasy"
     SCIFI = "Science Fiction"
@@ -40,13 +41,13 @@ class Story(BaseModel):
     follows: int
     date_created: datetime
     date_modified: datetime
-    
-    
+
+
 class StoryIn(BaseModel):
     title: str
     description: str
     genres: List[StoryGenre]
-    
+
 
 class StoryUpdate(BaseModel):
     title: Optional[str] = None
